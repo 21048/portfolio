@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: inherit;
+}
+  
+html {
+    /* スムーススクロール用 */
+    scroll-behavior: smooth;
+}
+body {
+    line-height: 1.6;
+}
+  
+/* ヘッダを上に固定 */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(48, 255, 248);*/
+    background: linear-gradient(to bottom right, rgb(192, 247, 255, 1), rgba(254, 255, 167, 0.8));
+    z-index: 9999; /*重なりを調整*/
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+header h1 {
+  text-align: center;
+  position: relative;
+  content: none;
+  height: 100px;
+  padding-top: 22px;
+  color: rgb(92, 146, 255);
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 0;
+  height: 100%;
+}
+header li {
+    display: flex;
+    align-items: center;
+}
+header ul li a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  color: rgb(92, 146, 255);
+  font-weight: 550;
+}
+header h1::after {
+    content: none;
+}
+
+
+#home h1{
+    color: rgba(255, 255, 255, 1);
+}
+
+
+#work {
+    text-align: center;
+    padding-top: 10em;
+    background-color: rgb(255, 255, 220);
+    padding-bottom: 8em;
+}
+#work h1 {
+    color: rgb(92, 146, 255);
+}
+#work .sakuhin{
+    display: flex;
+    height: 40%;
+    width: 80%;
+    margin-left: 10%;
+    column-count: 2;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#work .sakuhin .saku {
+    flex-shrink: 0;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+#work .sakuhin .saku img{
+    margin-top: 5em;
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.button-container {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+}
+.button-container a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 190, 110);
+  font-size: 1.2rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  max-width: 100%;
+  width: 360px;
+  display: inline-block;
+  text-align: center;
+}
+.button-container a::after {
+  content: '>';
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  right: 2rem;
+  top: calc(50% - 0.6rem);
+}
