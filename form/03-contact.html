@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせフォーム</title>
+    <link rel="stylesheet" href="03-contact.css">
+</head>
+<body>
+    <div class="contact">
+    <h1 class="title">お問い合わせフォーム</h1>
+    <div class="video-bg">
+        <video id="video" poster="動画が再生できない場合に表示する画像のpath"
+               webkit-playsinline playsinline muted autoplay loop>
+          <source src="pc.mp4" type="video/mp4">
+          <p>動画を再生できません。</p>
+        </video>
+      </div>
+    <form action="https://us-central1-web-design-809ef.cloudfunctions.net/contact" method="post">
+    <div class = "setsumei">
+        <h4>弊社にご関心をお持ちいただきまして、ありがとうございます。</h4>
+        <h4>ご相談や弊社施作についてなど、お気軽にお問い合わせ下さい。</h4>
+        <h4>お送りいただきました内容を確認次第、担当者よりご連絡させていただきます。</h4>
+        <br>
+        <h4>各項目に入力していただき、終わりましたら送信ボタンを押して下さい。</h4>
+        </class>
+    </div>
+    
+    <div class="table">
+    <input type="hidden" name="number" value="X00000">
+    <table>
+    <tr>
+        <th class="contact-item">名前</th>
+        <td class="contact-body">
+          <input type="text" name="onamae" id="onamae" class="form-text" />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">email</th>
+        <td class="contact-body">
+          <input type="text" name="email" id="email" class="form-text" />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">電話</th>
+        <td class="contact-body">
+          <input type="telno" name="telno" id="telno" class="form-text" />
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">返信が必要ですか？</th>
+        <td class="contact-body">
+          <label class="contact-ismustrep">
+            <input type="checkbox" name="ismustrep" id="ismustrep" required>
+            <span class="contact-ismustrep-txt">必要です</span>
+          </label>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">ご希望の連絡手段</th>
+        <td class="contact-body">
+          <label class="contact-way">
+            <input type="radio" name="means" id="means1" value="mail">
+            <span class="contact-way-txt">メール</span>
+          </label>
+          <label class="contact-way">
+            <input type="radio" name="means" id="means2" value="tel">
+            <span class="contact-way-txt">電話</span>
+          </label>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">お問い合わせ種別</th>
+        <td class="contact-body">
+            <select name="contacttype" id="contacttype" class="form-select">
+                <option value="1">Webサイト作成依頼</option>
+                <option value="2">見積もり依頼</option>
+                <option value="3">その他お問い合わせ</option>
+          </select>
+        </td>
+    </tr>
+    <br>
+    <tr>
+        <th class="contact-item">お問い合わせ内容</th>
+        <td class="contact-body">
+            <textarea name="contacttext" id="contacttext" cols="50" rows="10" required></textarea>
+        </td>
+    </tr>
+    </table>
+    </div>
+    <button type="submit">送信</button>
+    </form>
+    </div>
+</body>
+</html>

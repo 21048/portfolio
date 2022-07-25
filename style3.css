@@ -100,36 +100,44 @@ header h1::after {
   }
   #about h1{
       color: rgb(255, 217, 0);
+      padding-bottom: 20px;
+  }
+  #about .pic{
+    padding:0 !important;
   }
   #about .pic img{
       width: 20%;
       height: auto;
-      padding-top: 2em;
       position: relative;
+      margin-top: 3em;
+      object-fit: cover;
+      border-radius:50%;
   }
   #about .box {
-      width: 300px;
-      height: 300px;
+      width: 350px;
+      height: 350px;
       background-color: rgb(254, 255, 193);
-      margin-left: 45%;
-      margin-top: -250px;
+      margin-left: 34em;
+      margin-top: -20.5em;
+      object-fit: cover;
+      border-radius:50%;
   }
   
-  #about .ab {
-      display: flex;
-      object-position: center;
-      padding-top: 5em;
+  #about  .int {
+    background-color: rgb(254, 255, 224);
+    margin-top: 5em;
+    padding: 3em;
   }
-  #about .ab .int {
-      margin-left: 30%;
-  }
-  #about .ab .int h3 {
+  #about .int h3 {
       font-weight: 200;
       font-size: 17px;
   }
-  #about .ab .skill {
-      padding-left: 80px;
-      text-align: left;
+  #about .skill {
+    margin-top: 5em;
+      text-align: center;
+  }
+  #about .skill p{ 
+    padding-top: 1em;
   }
   
 
@@ -141,4 +149,5 @@ header h1::after {
     text-align: center;
     font-size: 20px;
     font-weight: 200;
+    color: rgb(92, 146, 255);
 }

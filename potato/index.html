@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第7回 課題2 ポテトサイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ヘッダ ロゴとグローバルナビゲーション -->
+  <header>
+    <h1>Potato Stand</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Heroセクション -->
+  <section id="home">
+    <h1>Potato Stand</h1>
+    <p class="lead">最高のポテトを揚げる</p>
+
+    <!-- 背景動画用のvideoタグ -->
+    <div class="video-bg">
+      <video id="video" poster="動画が再生できない場合に表示する画像のpath"
+             webkit-playsinline playsinline muted autoplay loop>
+        <source src="Potato.mp4" type="video/mp4">
+        <!-- ブラウザによっては再生できない形式があるので、複数形式を持たせておくのが理想
+        <source src="video/movie.mp4" type="video/mp4">
+        <source src="video/movie.ogv" type="video/ogv">
+        <source src="video/movie.webm" type="video/webm">-->
+        <p>動画を再生できません。</p>
+      </video>
+    </div>
+  </section>
+
+  <!-- Menuセクション -->
+  <section id="menu">
+    <h2>厳選されたジャガイモ</h2>
+    <div class="menu-item">
+      <img src="potato.jpg" alt="">
+      <p class="texts">選び抜かれたジャガイモを使用し、最高級の美味しさを</p>
+    </div>
+    <h2>ホクホクフライドポテト</h2>
+    <div class="menu-item">
+      <img src="fries1.jpg" alt="">
+      <p class="texts">揚げたてのフライドポテトをさまざまな味で提供しています
+      <br>
+      <br>
+      フライドポテト(塩、ケチャップ、マヨネーズ、チリパウダー)...650円</p>
+    </div>
+
+    <div class="button-container">
+      <a href="#" class="button">メニューを見る</a>
+    </div>
+
+  </section>
+
+  <!-- 情報表示セクション -->
+  <section id="about">
+    <h3>Potato Stand</h3>
+    <div class="about-container">
+      <table>
+        <tbody>
+          <tr><th>住所</th><td>〒000-0000<br>愛知県豊田市〇〇町123-23<br>(Google map)</td></tr>
+          <tr><th>電話番号</th><td>000-000-0000</td></tr>
+          <tr><th>営業時間</th><td>10:00~20:00</td></tr>
+          <tr><th>定休日</th><td>毎週火曜日</td></tr>
+          <tr><th>座席数</th><td>10席</td></tr>
+          <tr><th>設備</th><td>完全禁煙<br>駐車場あり(4台)</td></tr>
+          <tr><th>アクセス</th><td>愛環八草駅下車徒歩10分</td></tr>
+        </tbody>
+      </table>
+      <div class="googlemap">
+        <!-- ここはPCでのみ表示される場所で、GoogleMapの埋め込みが入ります -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13044.111079701543!2d137.10699165!3d35.18086039999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003670e1ea9d925%3A0x4b91fbaa2287b243!2z5oSb55-l5bel5qWt5aSn5a2m!5e0!3m2!1sja!2sjp!4v1653896268307!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNSリンクと、著作権表示 -->
+  <footer>
+    <ul>
+      <li><a href="https://about.instagram.com/ja-jp" target="_blank"><img src="インスタグラムのシンプルなロゴのアイコン 1.svg" alt=""></a></li>
+      <li><a href="https://ja-jp.facebook.com/" target="_blank"><img src="FACEBOOKのアイコン素材 3.svg" alt=""></a></li>
+    </ul>
+    <p class="copyright">
+      <small>
+        © 2022 AIT Web design sample Co., Ltd.
+      </small>
+    </p>
+    <a href="#home" id="page-top">TOP</a>
+
+  </footer>
+</body>
+</html>

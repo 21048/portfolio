@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  /* スムーススクロール用 */
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.6;
+}
+
+/* ヘッダを上に固定 */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(248, 255, 174);
+  z-index: 9999; /*重なりを調整*/
+}
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+
+/* 参考: https://coco-factory.jp/ugokuweb/move01/6-3-1/ */
+.video-bg {
+  position: absolute; /* fixedからabsoluteに変えました */
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+#video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+}
+
+header h1 {
+  text-align: center;
+  position: relative;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+header ul li a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+header h1 img {
+  max-width: 100%;
+}
+
+@media (min-width: 769px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+
+  header h1 {
+    content: none;
+    height: 100px;
+  }
+
+  header h1::after {
+    content: none;
+  }
+
+  header ul {
+    margin-top: 0;
+    height: 100%;
+  }
+  
+  header li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#home h1 {
+  color: rgb(254, 255, 167);
+  font-size: 3rem;
+}
+
+#home p{
+  color: rgb(255, 255, 227);
+  font-size: 1.5rem;
+}
+
+.menu-item img {
+  margin:  1rem 0;
+  position: relative;
+  left: -2rem;
+  width: calc(100% + 4rem);
+  max-width: calc(100% + 4rem);
+  height: 150px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#menu {
+  position: relative;
+  overflow: hidden;
+  color: rgb(255, 166, 50);
+}
+#menu h2 {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin-top: 80px;
+  text-align: center;
+}
+.menu-item p {
+  margin:  0 0 2rem;
+}
+
+p {
+  font-size: 1.25rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  text-align: center;
+}
+br {
+  font-size: 1.25rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  text-align: center;
+}
+
+.button-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.button-container a {
+  color: aliceblue;
+  background-color: rgb(255, 159, 42);
+  font-size: 1.2rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  max-width: 100%;
+  width: 360px;
+  display: inline-block;
+  text-align: center;
+}
+.button-container a::after {
+  content: '>';
+  font-size: 1.2rem;
+  line-height: 1;
+  position: absolute;
+  right: 2rem;
+  top: calc(50% - 0.6rem);
+}
+
+@media (min-width: 769px) {
+  /* PC用のレイアウトCSS */
+  #menu h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .menu-item img {
+    flex: 1;
+    height: 480px;
+  }
+  .menu-item .texts {
+    font-size: 1.2rem;
+    width: 480px;
+    padding: 4rem;
+    background: #ffffff;
+  }
+  .menu-item:nth-of-type(even) img {
+    order: 2;
+  }
+  .menu-item:nth-of-type(even) .texts {
+    order: 1;
+  }
+}
+
+/*about*/
+#about {
+  padding: 2rem;
+}
+.about-container {
+  display: flex;
+}
+#about h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.about-container {
+  display: flex;
+}
+#about table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#about table tr {
+  border-bottom: 1px solid #ffcd42;
+}
+#about table tr:last-of-type {
+  border-bottom: none;
+}
+#about table th,
+#about table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px 0 24px;
+  font-weight: normal;
+}
+#about table th {
+  min-width: 5rem;
+}
+.googlemap {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  /* PC用のレイアウトCSS */
+
+  #about {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  #about h3 {
+    text-align: initial;
+  }
+  .googlemap {
+    display: flex;
+    flex: 1;
+    position: relative;
+  }
+  .googlemap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+  #about table {
+    width: 480px;
+    margin-right: 2rem;
+  }
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 1.5rem;
+}
+footer ul li a {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+footer ul li a svg {
+  fill: var(--light-100) !important;
+  width: 32px;
+  height: 32px;
+}
+footer ul li.insta a:hover, 
+footer ul li.insta a:active {
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+}
+footer ul li.fb a:hover,
+footer ul li.fb a:active {
+  background: #3b5998;
+}
+footer small {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+/* トップへ戻るボタン */
+#page-top {
+  text-decoration: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  background: #fff;
+  color: #737373;
+  padding: 10px;
+  border: solid 1px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px -6px rgba(0,0,0,.5), 0 3px 10px -4px rgba(0,0,0,.2);
+}
+#page-top:hover {
+  background: #666; 
+  color: #fff; 
+}
